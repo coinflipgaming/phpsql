@@ -1,0 +1,11 @@
+zapytanie 1. 
+select klient.imie,klient.nazwisko,klient.miasto from klient where miasto like "Legionowo" or "Warszawa";
+
+zapytanie 2.
+select produkty.nazwa from produkty where (produkty.cena_brutto > 500);
+
+zapytanie 3.
+select kategorie.nazwa_kategorii, produkty.cena_brutto from produkty inner join kategorie on kategorie.id_kat = produkty.id_kat;
+
+zapytanie 4.
+select zamowienia.id_zam,zamowienia.ilosc,zamowienia.wartosc,produkty.nazwa from zamowienia inner join produkty on zamowienia.id_prod = produkty.id_prod where zamowienia.id_klient like 2
